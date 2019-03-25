@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-class Inbox extends Component {
+export default class Inbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,11 +10,17 @@ class Inbox extends Component {
 
   render() {
     return (
-      <View>
+      <View style={style.container}>
         <Text> Inbox </Text>
       </View>
     );
   }
 }
 
-export default Inbox;
+const style = StyleSheet.create({
+  container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+  }
+});

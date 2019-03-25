@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Platform} from 'react-native';
 
 import { createBottomTabNavigator }from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -24,23 +24,47 @@ export default createBottomTabNavigator({
     Explore: {
       screen: Explore,
       navigationOptions: {
-        tabBarLabel: 'EXPLORE',
+        tabBarLabel: 'EXPLORAR',
         tabBarIcon:({tintColor}) => (
-          <Icon name="ios-search-outline" color={tintColor} size={24} />
+          <Icon name="md-search" color={tintColor} size={24} />
         )
       }
   },
   Saved: {
-      screen: Saved
+      screen: Saved,
+      navigationOptions: {
+        tabBarLabel: 'SALVOS',
+        tabBarIcon:({tintColor})=> (
+          <Icon name="md-heart-empty" color={tintColor} size={24} />
+        )
+      }
   },
   Trips: {
-      screen: Trips
+      screen: Trips,
+      navigationOptions: {
+        tabBarLabel: 'VIAGENS',
+        tabBarIcon:({tintColor})=> (
+          <Icon name="md-heart-empty" color={tintColor} size={24} />
+        )
+      }
   },
   Inbox: {
-      screen: Inbox
+      screen: Inbox,
+      navigationOptions: {
+        tabBarLabel: 'MENSAGENS',
+        tabBarIcon:({tintColor})=>(
+          <Icon name="md-chatboxes" color={tintColor} size={24} />
+        )
+      }
   },
   Profile: {
-      screen: Profile
+      screen: Profile,
+      navigationOptions: {
+        tabBarLabel: 'PERFIL',
+        tabBarIcon:({tintColor})=>(
+          <Icon name="md-person" color={tintColor} size={24} />
+        )
+      }
   }
 });
 

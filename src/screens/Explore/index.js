@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native'
 export default class Explore extends Component {
   render() {
     return (
-      <View>
+      <View style={style.container}>
         <Text> Explore </Text>
       </View>
     )
@@ -12,5 +12,9 @@ export default class Explore extends Component {
 }
 
 const style = StyleSheet.create({
-
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 });

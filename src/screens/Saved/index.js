@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 class Saved extends Component {
   constructor(props) {
@@ -10,11 +10,19 @@ class Saved extends Component {
 
   render() {
     return (
-      <View>
+      <View style={style.container}>
         <Text> Saved </Text>
       </View>
     );
   }
 }
+
+const style = StyleSheet.create({
+  container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+  }
+});
 
 export default Saved;
