@@ -4,13 +4,13 @@ import {StyleSheet, Text, View, Platform} from 'react-native';
 import { createBottomTabNavigator }from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import Explore from './src/screens/Explore';
-import Saved from './src/screens/Saved';
-import Inbox from './src/screens/Inbox';
-import Profile from './src/screens/Profile';
-import Trips from './src/screens/Trips';
+import Explore from '../../screens/Explore';
+import Saved from '../../screens/Saved';
+import Inbox from '../../screens/Inbox';
+import Profile from '../../screens/Profile';
+import Trips from '../../screens/Trips';
 
-export class App extends Component {
+export class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
